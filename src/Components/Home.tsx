@@ -10,11 +10,12 @@ const Home = () => {
     const getCardData = async () => {
         const res = await fetch(`https://jsonplaceholder.typicode.com/posts?_limit=9&_page=${page}`);
         const data = await res.json();
-        setcard((prev) => [...prev, ...data])
+        // console.log(data)
+        setcard((prev) => [...prev,...data])
         setloading(false)
     };
   
-    const handelinfinitescroll = () => {
+    const handelinfinitescroll = () => { 
 
         try {
             if (window.innerHeight + document.documentElement.scrollTop + 1 >= document.documentElement.scrollHeight) {
@@ -29,6 +30,7 @@ const Home = () => {
             console.log(error)
         }
     }
+    
     useEffect(() => {
         getCardData()
     }, [page])

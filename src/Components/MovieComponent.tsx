@@ -5,7 +5,7 @@ import '../Components/Style/Style.css'
     <div className="wrapper">
       <div className="cointainer">
         <h1>Infinite Scrolling</h1>
-        <div className="grid grid-three-column">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10" style={{}}>
             {movieInfo.map((curVal:any,id:any)=>{
                 return <MovieCard key={id} myData={curVal}/>
             })}

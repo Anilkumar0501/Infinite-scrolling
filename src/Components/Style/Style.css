@@ -76,6 +76,10 @@ button:focus-visible {
 .grid-three-column {
   grid-template-columns: repeat(3, 1fr);
 }
+/* @media (max-width: 768px) {
+  .md-grid-one-column {
+    grid-template-columns: 1fr;
+  }} */
 
 .card {
   /* background-color: #535bf2; */
